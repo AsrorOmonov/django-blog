@@ -1,0 +1,10 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+    <h1>Delete Post</h1>
+    <form method="post">
+        {% csrf_token %}
+        <p>Are you sure you wanna delete {{ postmodel.title }}</p>
+        <input type="submit" value="Confirm">
+    </form>
+{% endblock %}

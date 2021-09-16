@@ -1,0 +1,14 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+
+    {% for post in object_list %}
+
+        <div class="post-entry">
+            <h2><a href="{% url 'blog:post-detail' pk=post.pk %}">{{ post.title }}</a></h2>
+            <p>{{ post.content }}</p>
+        </div>
+
+    {% endfor %}
+{% endblock %}
+

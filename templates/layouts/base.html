@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django blog</title>
+</head>
+<body>
+
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:ǓǏǏ"
+      rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<div>
+    <header>
+        <div class="nav-left">
+            <h1>
+                <a href="{% url 'blog:home' %}">Django blog</a>
+            </h1>
+        </div>
+
+        <div class="nav-right">
+            <a href="{% url 'blog:post-new' %}">+ New Blog Post</a>
+        </div>
+    </header>
+
+    {% if user.is_authenticated %}
+        <p>Hi {{ user.username }}!</p>
+        <p><a href="{% url 'logout' %}">Log Out</a></p>
+    {% else %}
+        <p>You are not logged in.</p>
+        <a href="{% url 'login' %}">Log In</a>
+    {% endif %}
+    {% block content %}
+    {% endblock %}
+
+</div>
+</body>
+</html>
