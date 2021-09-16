@@ -4,7 +4,7 @@ This is a simple blog app completed with Django web framework. Mostly focused on
 
 
 After cloning the project, you can install every package manually:
-  1) Install venv
+  1) pip install venv
   2) pip install -r requirements.txt
   3) python manage.py runserver
 
