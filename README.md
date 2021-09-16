@@ -1,6 +1,6 @@
 # django-blog
 
-This is a simple blog app completed with Django web framework. Mostly focused on backend compared to frontend. The user or admin can use CRUD. Besides, registration system is also available.
+This is a simple blog app completed with Django web framework. Mostly focused on backend compared to frontend. The user or admin can use CRUD. Besides, registration system is also available. That means a user can sign up, log in, log out etc.
 
 
 After cloning the project, you can install every package manually:
